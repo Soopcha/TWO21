@@ -16,7 +16,7 @@ public class Main {
         }
         System.out.println();
 
-        list.remove(2);
+        System.out.println(list.remove(2) + " Был удалён и показан нам тут, в консоли");
         list.removeFirst();
         int i = 0;
         for (Integer v : list) {

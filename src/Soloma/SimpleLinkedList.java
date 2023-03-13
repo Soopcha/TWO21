@@ -102,7 +102,7 @@ public class SimpleLinkedList<T> implements Iterable<T> {
         return remove(count - 1);
     }
 
-    public T remove(int index) throws SimpleLinkedListException {
+    public T remove(int index) throws SimpleLinkedListException { // удалить и возвратить эл удалённый
         checkEmpty();
         if (index < 0 || index >= count) {
             throw new SimpleLinkedListException("Incorrect index");
@@ -128,7 +128,7 @@ public class SimpleLinkedList<T> implements Iterable<T> {
             //   |  (prev)                                      | (а ссыдка next должна быть на next.next по отношению к prev)
         }
         count--;
-        return value; //возвращаем удолённый эл
+        return value; //возвращаем эл удалённый
     }
 
     public void insert(int index, T value) throws SimpleLinkedListException { // вставить эл
@@ -145,6 +145,10 @@ public class SimpleLinkedList<T> implements Iterable<T> {
             }
         }
         count++;
+    }
+
+    public void rearrangingElements ( int index1, int index2){ // метод перестановки эл
+
     }
 
     public int size() {
